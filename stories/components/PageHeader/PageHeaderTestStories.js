@@ -4,10 +4,10 @@ import { storiesOf } from '@storybook/react';
 
 import { storySettings } from './storySettings';
 import PageHeader from 'wix-style-react/PageHeader';
-import { getTestStoryKind } from '../storiesHierarchy';
+import { getTestStoryKind } from '../../storiesHierarchy';
 import Button from 'wix-style-react/Button';
 import Dropdown from 'wix-style-react/Dropdown';
-import { RTLWrapper } from '../utils';
+import { RTLWrapper } from '../../utils';
 
 const PageHeaderContainer = props => {
   return (

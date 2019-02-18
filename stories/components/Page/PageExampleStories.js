@@ -9,7 +9,7 @@ import ExampleStretchTable from './ExampleStretchTable';
 import ExampleStickyTableWithGap from './ExampleStickyTableWithGap';
 
 const PageExampleStories = storiesOf(
-  `${Category.LAYOUT}/2.5 Page Examples`,
+  `${Category.COMPONENTS}/Page Examples`,
   module,
 );
 
