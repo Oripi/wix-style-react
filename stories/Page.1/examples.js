@@ -1,6 +1,8 @@
 export const importExample = `
-import FormField from 'wix-style-react/FormField';
-import Input from 'wix-style-react/Input'
+import Page from 'wix-style-react/Page';
+import {Container, Row, Col} from 'wix-style-react/Grid';
+import Card from 'wix-style-react/Card';
+import EmptyState from 'wix-style-react/EmptyState';
 `;
 
 export const sizes = `
