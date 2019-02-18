@@ -20,6 +20,7 @@ describe('Search', () => {
 
   afterEach(() => {
     autoExampleDriver.reset();
+    autoExampleDriver.remount();
   });
 
   eyes.it('should filter search options by input', () => {
@@ -45,12 +46,10 @@ describe('Search', () => {
       driver.enterText('fox');
       expect(driver.hasClearButton()).toBe(true);
       driver.clickClear();
-      expect(driver.hasClearButton(), 'clear button is gone').toBe(false);
-      expect(
-        await driver.getSearchDropdown().isDisplayed(),
-        'searchdropdown should be close',
-      ).toBe(false);
-      expect(driver.getText()).toBe('');
+      await eventually(async () => {
+        expect(await driver.getSearchDropdown().isDisplayed()).toBe(false),
+          expect(driver.getText()).toBe('');
+      });
     },
   );
 });
