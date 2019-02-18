@@ -3,23 +3,16 @@ import { storySettings } from './storySettings';
 import { baseScope } from '../utils/Components/LiveCodeExample';
 import {
   description,
-  table,
-  importExample,
   columns,
   code as baseCode,
 } from 'wix-storybook-utils/Sections';
-import LinkTo from '@storybook/addon-links/react';
 import * as examples from './examples';
 import UXStorySections from '../UXStorySections';
+import ExampleGeneralLayoutRaw from '!raw-loader!./ExampleGeneralLayout';
+import processLive from './processLiveCode';
 
 const code = config =>
   baseCode({ components: baseScope, compact: true, ...config });
-
-const example = ({ title, text, source }) =>
-  columns({
-    items: [description({ title, text }), code({ source })],
-  });
-
 export default {
   category: storySettings.kind,
   storyName: storySettings.storyName,
@@ -51,6 +44,8 @@ export default {
         description({}),
       ],
     }),
-    code({ source: examples.sizes }),
+    code({
+      source: processLive(ExampleGeneralLayoutRaw),
+    }),
   ],
 };
