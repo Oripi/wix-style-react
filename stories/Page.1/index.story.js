@@ -41,14 +41,16 @@ export default {
       importExample: examples.importExample,
     }),
     description({ text: '## Examples' }),
-    columns([
-      description({
-        pretitle: '2.1.A',
-        title: 'General Layout',
-        description: 'A classic layout for forms and lists',
-      }),
-      description({}),
-    ]),
+    columns({
+      items: [
+        description({
+          pretitle: '2.1.A',
+          title: 'General Layout',
+          description: 'A classic layout for forms and lists',
+        }),
+        description({}),
+      ],
+    }),
     code({ source: examples.sizes }),
   ],
 };
