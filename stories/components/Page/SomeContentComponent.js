@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool } from 'prop-types';
-import times from '../../src/utils/operators/times';
+import times from '../../../src/utils/operators/times';
 
 export const LongTextContent = props => {
   const pages = times(props.numOfPages, (x, i) => (

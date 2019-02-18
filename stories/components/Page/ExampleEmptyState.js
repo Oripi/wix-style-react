@@ -7,7 +7,7 @@ import EmptyState from 'wix-style-react/EmptyState';
 import Card from 'wix-style-react/Card';
 import { Add } from 'wix-style-react/new-icons';
 
-import ImagePlaceholder from '../assets/ImagePlaceholder';
+import ImagePlaceholder from '../../assets/ImagePlaceholder';
 
 const ExampleEmptyState = props => (
   <Page

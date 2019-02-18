@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 
 import Page from 'wix-style-react/Page';
-import { getTestStoryKind } from '../storiesHierarchy';
+import { getTestStoryKind } from '../../storiesHierarchy';
 
 import * as s from './PageTestStories.scss';
 import { header, tail, fixedContent, content } from './PageChildren';

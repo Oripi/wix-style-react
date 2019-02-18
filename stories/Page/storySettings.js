@@ -1,22 +1,7 @@
-const PageWithScrollConstants = (function() {
-  const pageHeight = 500;
-  const pageBottomPadding = 48;
-  const headerContainerHeight = 156;
-  const minimizedHeaderContainerHeight = 67;
-  const scrollTrigger = headerContainerHeight - minimizedHeaderContainerHeight;
-
-  return {
-    scrollTrigger,
-    minimizedHeaderContainerHeight,
-    headerContainerHeight,
-    pageBottomPadding,
-    pageHeight,
-  };
-})();
+import { Category } from '../storiesHierarchy';
 
 export const storySettings = {
-  category: '2. Layout',
+  kind: Category.LAYOUT,
+  category: Category.LAYOUT,
   storyName: '2.5 Page',
-  dataHook: 'story-page',
-  PageWithScrollConstants,
 };

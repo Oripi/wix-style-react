@@ -3,7 +3,7 @@ import React from 'react';
 import PageHeader from 'wix-style-react/PageHeader';
 import Button from 'wix-style-react/Button';
 
-import Breadcrumbs from '../Page/Breadcrumbs';
+import Breadcrumbs from '../components/Page/Breadcrumbs';
 import './PageHeader.scss';
 import { storySettings } from './storySettings';
 
