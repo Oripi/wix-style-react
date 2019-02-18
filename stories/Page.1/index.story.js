@@ -24,14 +24,17 @@ export default {
   storyName: storySettings.storyName,
 
   sections: [
-    description({
-      title: 'Description',
-      text: `
-Text Input is a composition of 2 individual components – &lt;FormField/&gt; and &lt;Input /&gt;.
-
-This composition is used to build various forms.`,
+    columns({
+      items: [
+        description({
+          title: 'Description',
+          text: `Page Layout is a composition of 4 different components: Page, Grid, Page.Header and Card.
+      
+All business manager applications should start with this setup and the rest of components are built on top.`,
+        }),
+        description({ text: '' }),
+      ],
     }),
-
     table({
       title: 'Included Components',
       rows: [
