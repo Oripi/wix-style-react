@@ -19,6 +19,7 @@ import './ScrollBar'; // 1.8 ScrollBar
 
 // 2. Layout
 import './Page/index.story.js'; // 2.5 Page
+import './Page.1/index.story.js'; // 2.5 Page
 import './PageHeader/index.story.js'; // 2.5 + PageHeader
 import './Page/PageExampleStories.js'; // 2.5 + Page Examples
 import './EmptyState/EmptyState.story'; // 2.6 EmptyState
