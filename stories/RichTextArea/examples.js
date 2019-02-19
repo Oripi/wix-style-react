@@ -12,3 +12,7 @@ export const composition = `
   <RichTextArea />
 </FormField>
 `;
+
+export const richText = `
+<RichTextArea value="<p><strong>Bold</strong></p><p><em>Italic</em></p><p><u>Underline</u></p><p><a href='https://github.com/wix/wix-style-react'>Click here</a></p>" />
+`;

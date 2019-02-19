@@ -46,8 +46,12 @@ export default {
           title: 'Import',
           source: "import RichTextArea from 'wix-style-react/RichTextArea';",
         }),
+        description({ text: '## Examples' }),
+        description({
+          title: 'With rich text',
+        }),
         code({
-          source: examples.composition,
+          source: examples.richText,
         }),
       ],
     }),
