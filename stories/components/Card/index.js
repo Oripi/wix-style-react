@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Markdown from 'wix-storybook-utils/Markdown';
 import CodeExample from 'wix-storybook-utils/CodeExample';
 
-import CardReadme from '../../src/Card/README.md';
+import CardReadme from '../../../src/Card/README.md';
 
 import ExampleBasic from './ExampleBasic';
 import ExampleBasicRaw from '!raw-loader!./ExampleBasic';
@@ -16,8 +16,9 @@ import ExampleCollapseRaw from '!raw-loader!./ExampleCollapse';
 
 import ExampleEmptyState from './ExampleEmptyState';
 import ExampleEmptyStateRaw from '!raw-loader!./ExampleEmptyState';
+import { Category } from '../../storiesHierarchy';
 
-storiesOf('2. Layout', module).add('Card Layout', () => (
+storiesOf(Category.COMPONENTS, module).add('Card', () => (
   <div>
     <Markdown source={CardReadme} />
 

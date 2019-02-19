@@ -24,7 +24,6 @@ import './components/Page/PageExampleStories.js'; // 2.5 + Page Examples
 import './EmptyState/EmptyState.story'; // 2.6 EmptyState
 import './StatsWidget/index.story'; // 2.7 StatsWidget
 import './AddItem/AddItem.story'; // 2.8 AddItem
-import './Card';
 
 // 3. Inputs
 import './TextField/index.story'; // 3.1. Text Field
@@ -111,6 +110,7 @@ import './components/Page/index.story.js';
 import './components/Calendar/index.story';
 import './components/CalendarPanel/index.story';
 import './CalendarPanelFooter/index.story';
+import './components/Card';
 import './CardGalleryItem/CardGalleryItem.story';
 import './Carousel/index.story.js';
 import './Collapse.story';
