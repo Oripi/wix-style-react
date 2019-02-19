@@ -14,7 +14,7 @@ import processLive from './processLiveCode';
 const code = config =>
   baseCode({ components: baseScope, compact: true, ...config });
 export default {
-  category: storySettings.kind,
+  category: storySettings.category,
   storyName: storySettings.storyName,
 
   sections: [
