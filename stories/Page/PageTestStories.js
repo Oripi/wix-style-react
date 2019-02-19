@@ -3,6 +3,9 @@ import * as PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 
 import Page from 'wix-style-react/Page';
+import Notification from '../../src/Notification';
+import Card from '../../src/Card';
+
 import { getTestStoryKind } from '../storiesHierarchy';
 
 import * as s from './PageTestStories.scss';
@@ -10,6 +13,7 @@ import { header, tail, fixedContent, content } from './PageChildren';
 import { storySettings } from './storySettings';
 import ExampleEmptyState from './ExampleEmptyState';
 import { ExamplePageContainer } from './ExamplePageContainer';
+import { LongTextContent } from './SomeContentComponent';
 
 const PageContainer = props => {
   return (
@@ -117,6 +121,26 @@ PageTestStories.add('10. Page Example with sidePadding=0', () => (
   </PageContainer>
 ));
 
+PageTestStories.add('11. With Notification', () => (
+  <PageContainer>
+    <Page {...defaultPageProps}>
+      {header()}
+      <Page.Content>
+        <Card>
+          <Card.Header title="Hello" />
+          <Card.Content>
+            <LongTextContent />
+          </Card.Content>
+        </Card>
+      </Page.Content>
+    </Page>
+    <Notification type="sticky" show>
+      <Notification.TextLabel>Hello Notification</Notification.TextLabel>
+      <Notification.CloseButton />
+    </Notification>
+  </PageContainer>
+));
+
 /*
  *  Vertical Test Stories
  */
@@ -206,7 +230,7 @@ class PageWithScroll extends React.Component {
     // Small scroll - lower than the threshold that triggers minimization
     <PageWithScroll
       {...defaultProps}
-      extraScroll={PageWithScroll.Constants.scrollTrigger - 1}
+      extraScroll={PageWithScroll.Constants.maxScrollNoTrigger}
     />
   ));
 
