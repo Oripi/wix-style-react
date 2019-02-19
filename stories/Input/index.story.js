@@ -2,10 +2,10 @@ import { storySettings } from './storySettings';
 import {
   tab,
   code as baseCode,
+  description,
   importExample,
   api,
   testkit,
-  tabs,
   playground,
 } from 'wix-storybook-utils/Sections';
 import { baseScope } from '../utils/Components/LiveCodeExample';
@@ -30,22 +30,21 @@ export default {
       title: 'Usage',
       sections: [
         importExample({
-          source: "import Input from 'wix-style-react/Input'",
+          title: '### Import',
+          source: "import Input from 'wix-style-react/Input';",
         }),
 
-        tabs({
-          tabs: [
-            { title: 'Standard', source: examples.standard },
-            { title: 'Error', source: examples.error },
-            { title: 'Loader', source: examples.loader },
-            { title: 'Affix', source: examples.affix },
-            { title: 'Icon Affix', source: examples.iconAffix },
-            { title: 'Sizes', source: examples.sizes },
-            { title: 'Rounded', source: examples.rounded },
-          ].map(({ title, source }) =>
-            tab({ title, sections: [code({ source })] }),
-          ),
-        }),
+        description({ text: '## Examples' }),
+
+        ...[
+          { title: 'Standard States', source: examples.standard },
+          { title: 'Error', source: examples.error },
+          { title: 'Loader', source: examples.loader },
+          { title: 'Affix', source: examples.affix },
+          { title: 'Icon Affix', source: examples.iconAffix },
+          { title: 'Sizes', source: examples.sizes },
+          { title: 'Rounded', source: examples.rounded },
+        ].map(code),
       ],
     }),
 
