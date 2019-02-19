@@ -9,11 +9,12 @@ import {
 import LinkTo from '@storybook/addon-links/react';
 
 import { baseScope } from '../utils/Components/LiveCodeExample';
+import { storySettings } from './storySettings';
 import * as examples from './examples';
 
 export const settings = {
-  category: '3. Inputs',
-  storyName: '3.3 RichTextArea',
+  category: storySettings.indexCategory,
+  storyName: `3.3 ${storySettings.storyName}`,
   dataHook: 'storybook-richtextarea',
 };
 

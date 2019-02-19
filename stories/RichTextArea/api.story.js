@@ -1,5 +1,4 @@
 import React from 'react';
-import { baseScope } from '../utils/Components/LiveCodeExample';
 import {
   tab,
   api,
@@ -9,9 +8,10 @@ import {
   playground,
   testkit,
 } from 'wix-storybook-utils/Sections';
-
-import { Category } from '../storiesHierarchy';
 import RichTextArea from 'wix-style-react/RichTextArea';
+
+import { baseScope } from '../utils/Components/LiveCodeExample';
+import { storySettings } from './storySettings';
 
 const code = config =>
   baseCode({
@@ -20,8 +20,8 @@ const code = config =>
   });
 
 export default {
-  category: Category.COMPONENTS,
-  storyName: 'RichTextArea',
+  category: storySettings.apiCategory,
+  storyName: storySettings.storyName,
   component: RichTextArea,
   componentPath: '../../src/RichTextArea/RichTextArea.js',
 
