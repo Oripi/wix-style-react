@@ -18,7 +18,6 @@ describe('Search', () => {
 
   afterEach(() => {
     autoExampleDriver.reset();
-    autoExampleDriver.remount();
   });
 
   eyes.it('should filter search options by input', () => {
