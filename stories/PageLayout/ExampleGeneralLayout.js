@@ -9,8 +9,8 @@ import { Breadcrumbs } from 'wix-style-react/Breadcrumbs';
 import { Row, Col, Container } from 'wix-style-react/Grid';
 
 class ExampleGeneralLayout extends React.Component {
-  render() {
-    const ActionBar = props => {
+  renderHeader() {
+    const ActionBar = () => {
       return (
         <Button withNewIcons prefixIcon={<Add />}>
           New Item
@@ -19,21 +19,32 @@ class ExampleGeneralLayout extends React.Component {
     };
 
     return (
-      <div style={{ height: '372px' }}>
-        <Page upgrade {...this.props}>
-          <Page.Header
-            title="Page Title"
-            breadcrumbs={
-              <Breadcrumbs
-                items={[1, 2, 3].map(i => ({ id: `${i}`, value: `Page ${i}` }))}
-                activeId="3"
-                size="medium"
-                theme="onGrayBackground"
-                onClick={() => {}}
-              />
-            }
-            actionsBar={<ActionBar />}
+      <Page.Header
+        title="Page Title"
+        breadcrumbs={
+          <Breadcrumbs
+            items={[1, 2, 3].map(i => ({ id: `${i}`, value: `Page ${i}` }))}
+            activeId="3"
+            size="medium"
+            theme="onGrayBackground"
+            onClick={() => {}}
           />
+        }
+        actionsBar={<ActionBar />}
+      />
+    );
+  }
+
+  render() {
+    const ExamplePageContainer = ({ children }) => (
+      <div style={{ height: '372px' }}>{children}</div>
+    );
+    const ExampleContent = () => <div style={{ height: '550px' }} />;
+
+    return (
+      <ExamplePageContainer>
+        <Page upgrade {...this.props}>
+          {this.renderHeader()}
           <Page.Content>
             <Container>
               <Row>
@@ -41,7 +52,7 @@ class ExampleGeneralLayout extends React.Component {
                   <Card>
                     <Card.Header title="Card Title" />
                     <Card.Content>
-                      <div style={{ height: '550px' }} />
+                      <ExampleContent />
                     </Card.Content>
                   </Card>
                 </Col>
@@ -49,7 +60,7 @@ class ExampleGeneralLayout extends React.Component {
             </Container>
           </Page.Content>
         </Page>
-      </div>
+      </ExamplePageContainer>
     );
   }
 }
