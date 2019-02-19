@@ -18,7 +18,8 @@ import './CircularProgressBar.story.js'; // 1.7 LinearProgressBar
 import './ScrollBar'; // 1.8 ScrollBar
 
 // 2. Layout
-import './Page/index.story.js'; // 2.5 Page
+import './Page/index.story.js'; // 2.1 Page Layout
+import './Card'; // 2.2 Card Layout
 import './components/PageHeader/index.story.js'; // 2.5 + PageHeader
 import './components/Page/PageExampleStories.js'; // 2.5 + Page Examples
 import './EmptyState/EmptyState.story'; // 2.6 EmptyState
