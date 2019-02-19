@@ -77,10 +77,20 @@ export default {
     columns({
       items: [
         description({
-          title: 'No Label',
-          text: 'Can be used without a label.',
+          title: 'Characters Limit',
+          text: 'It is allowed to set maximum number of characters',
         }),
-        liveCode({ compact: true, source: examples.withoutALabelExample }),
+        liveCode({ compact: true, source: examples.charLimitExample }),
+      ],
+    }),
+
+    columns({
+      items: [
+        description({
+          title: 'Position',
+          text: `Text Area's label can be position on top, left or can be hidden. Additional properties behave accordingly.`,
+        }),
+        liveCode({ compact: true, source: examples.positionExample }),
       ],
     }),
 
@@ -88,7 +98,7 @@ export default {
       items: [
         description({
           title: 'Resizable Height',
-          text: 'The text area can changes its size by user drag.',
+          text: 'The text area can change its size by user drag.',
         }),
         liveCode({ compact: true, source: examples.resizableHeightExample }),
       ],
