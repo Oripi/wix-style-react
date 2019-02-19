@@ -7,7 +7,7 @@ import {
   waitForVisibilityOf,
   scrollToElement,
 } from 'wix-ui-test-utils/protractor';
-import { storySettings } from '../../stories/EmptyState/storySettings';
+import { storySettings } from '../../stories/components/EmptyState/storySettings';
 
 describe('EmptyState', () => {
   const storyUrl = createStoryUrl({

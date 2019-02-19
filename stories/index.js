@@ -22,7 +22,7 @@ import './Page/index.story.js'; // 2.1 Page Layout
 import './Card'; // 2.2 Card Layout
 import './components/PageHeader/index.story.js'; // 2.5 + PageHeader
 import './components/Page/PageExampleStories.js'; // 2.5 + Page Examples
-import './EmptyState/EmptyState.story'; // 2.6 EmptyState
+import './EmptyState/EmptyState.story'; // 2.4 EmptyState
 import './StatsWidget/index.story'; // 2.7 StatsWidget
 import './AddItem/AddItem.story'; // 2.8 AddItem
 
@@ -117,6 +117,7 @@ import './Carousel/index.story.js';
 import './Collapse.story';
 import './components/Dropdown/Dropdown.story.js';
 import './DropdownBase/index.story';
+import './components/EmptyState/EmptyState.story';
 import './FormField/index.story.js';
 import './GenericModalLayout/GenericModalLayout.story.js';
 import './GoogleAddressInput/index.story.js';
