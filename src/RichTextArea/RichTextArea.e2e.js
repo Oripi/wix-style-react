@@ -10,7 +10,7 @@ import { flattenInternalDriver } from '../../test/utils/private-drivers';
 const EDITOR_TAB_ORDINAL = 7;
 
 describe('RichTextArea', () => {
-  const storyUrl = getStoryUrl(settings.category, settings.storyName);
+  const storyUrl = getStoryUrl(settings.apiCategory, settings.storyName);
   const richTextAreaTestkit = richTextAreaTestkitFactory({
     dataHook: settings.dataHook,
   });
