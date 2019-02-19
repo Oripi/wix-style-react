@@ -24,7 +24,6 @@ import './components/Page/PageExampleStories.js'; // 2.5 + Page Examples
 import './EmptyState/EmptyState.story'; // 2.6 EmptyState
 import './StatsWidget/index.story'; // 2.7 StatsWidget
 import './AddItem/AddItem.story'; // 2.8 AddItem
-import './Grid';
 import './Card';
 
 // 3. Inputs
@@ -120,6 +119,7 @@ import './DropdownBase/index.story';
 import './FormField/index.story.js';
 import './GenericModalLayout/GenericModalLayout.story.js';
 import './GoogleAddressInput/index.story.js';
+import './components/Grid';
 import './Heading/index.story';
 import './Input/index.story';
 import './InputArea/index.story.js';

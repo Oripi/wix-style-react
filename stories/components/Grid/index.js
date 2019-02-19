@@ -15,9 +15,10 @@ import ExampleRowWithEqualHeightRaw from '!raw-loader!./ExampleRowWithEqualHeigh
 import ExampleAutoAdjustedRow from './ExampleAutoAdjustedRow';
 import ExampleAutoAdjustedRowRaw from '!raw-loader!./ExampleAutoAdjustedRow';
 
-import GridReadme from '../../src/Grid/README.md';
+import GridReadme from '../../../src/Grid/README.md';
+import { Category } from '../../storiesHierarchy';
 
-storiesOf('2. Layout', module).add('Grid', () => (
+storiesOf(Category.COMPONENTS, module).add('Grid', () => (
   <div>
     <Markdown source={GridReadme} />
 

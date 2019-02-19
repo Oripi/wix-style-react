@@ -19,12 +19,13 @@ export default {
 
   sections: [
     ...UXStorySections({
-      description: `Page Layout is a composition of 4 different components: Page, Grid, Page.Header and Card.
-    All business manager applications should start with this setup and the rest of components are built on top.`,
+      description: `
+Page Layout is a composition of: Page, Page.Header Grid and Card.
+All business manager applications should have it as it's top most component.`,
       includedComponents: [
         { name: 'Page', description: 'Business Manager’s root component' },
-        { name: 'Page.Header', description: '<Page /> component’s child' },
-        { name: 'Layout', description: 'Component that constructs a grid' },
+        { name: 'Page.Header', description: '`<Page/>` component’s child' },
+        { name: 'Grid', description: 'Component that constructs a grid' },
         { name: 'Card', description: 'Light card component' },
         {
           name: 'EmptyState',
