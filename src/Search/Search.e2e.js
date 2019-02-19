@@ -4,8 +4,6 @@ import { waitForVisibilityOf } from 'wix-ui-test-utils/protractor';
 import { getStoryUrl } from '../../test/utils/storybook-helpers';
 import autoExampleDriver from 'wix-storybook-utils/AutoExampleDriver';
 
-import eventually from 'wix-eventually';
-
 describe('Search', () => {
   const storyUrl = getStoryUrl('3. Inputs', '3.9 Search');
   const driver = searchTestkitFactory({ dataHook: 'storybook-search' });
@@ -41,15 +39,13 @@ describe('Search', () => {
 
   eyes.it(
     'should clear input and show all search options after clear button click',
-    async () => {
+    () => {
       driver.clickOnInput();
       driver.enterText('fox');
       expect(driver.hasClearButton()).toBe(true);
       driver.clickClear();
-      await eventually(async () => {
-        expect(await driver.getSearchDropdown().isDisplayed()).toBe(false),
-          expect(driver.getText()).toBe('');
-      });
+      expect(driver.getSearchDropdown().isDisplayed()).toBe(false);
+      expect(driver.getText()).toBe('');
     },
   );
 });
