@@ -74,6 +74,7 @@ const run = () => {
         const transformedWithModules = await transformFromAstAsync(ast, null, {
           babelrc: true,
           ast: true,
+          filename: fileLoc,
         });
         const writeModules = writeFileAsync(
           fileLoc,
@@ -86,6 +87,7 @@ const run = () => {
           {
             babelrc: false,
             ast: false,
+            filename: fileLoc,
             plugins: ['@babel/plugin-transform-modules-commonjs'],
           },
         );
