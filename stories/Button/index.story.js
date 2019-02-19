@@ -4,7 +4,7 @@ import icons from '../utils/icons-for-story';
 import {
   tab,
   api,
-  liveCode as baseLiveCode,
+  code as baseCode,
   playground,
   description,
   importExample,
@@ -19,15 +19,14 @@ import styles from './examples.scss';
 
 const Link = ({ children, ...rest }) => <a {...rest}>{children}</a>;
 
-const baseProps = {
-  autoRender: false,
-  previewProps: {
-    className: styles.livePreview,
-  },
-};
-
-const liveCode = config =>
-  baseLiveCode({ components: { ...baseScope, Link }, ...baseProps, ...config });
+const code = config =>
+  baseCode({
+    components: { ...baseScope, Link },
+    previewProps: {
+      className: styles.livePreview,
+    },
+    ...config,
+  });
 
 export default {
   category: storySettings.kind,
@@ -70,7 +69,7 @@ export default {
             'Use primary buttons to give more prominence to actions in layouts with a lot of varying content.',
         }),
 
-        liveCode({
+        code({
           source: examples.primary,
         }),
 
@@ -80,7 +79,7 @@ export default {
             'Secondary button is best used for secondary or tertiary content, since it should not compete with your primary call to action.',
         }),
 
-        liveCode({
+        code({
           source: examples.secondary,
         }),
 
@@ -90,7 +89,7 @@ export default {
             'Button supports four main sizes: tiny, small,medium, large. Default size is medium',
         }),
 
-        liveCode({
+        code({
           source: examples.sizes,
         }),
 
@@ -100,7 +99,7 @@ export default {
             'Suffix and prefix icons can be added to a button by setting prefixIcon or suffixIcon props.',
         }),
 
-        liveCode({
+        code({
           source: examples.affixes,
         }),
 
@@ -109,7 +108,7 @@ export default {
           text: `A button can show a loading indicator.`,
         }),
 
-        liveCode({
+        code({
           source: examples.loading,
         }),
 
@@ -119,29 +118,16 @@ export default {
             'Control the rendered HTML tag, or render Button component as another component.',
         }),
 
-        liveCode({
+        code({
           source: examples.custom,
         }),
       ],
     }),
 
-    tab({
-      title: 'Playground',
-      sections: [playground()],
-    }),
-
-    tab({
-      title: 'API',
-      sections: [api()],
-    }),
-
-    tab({
-      title: 'Testkit',
-      sections: [
-        description({
-          text: testkit,
-        }),
-      ],
-    }),
+    ...[
+      { title: 'Playground', sections: [playground()] },
+      { title: 'API', sections: [api()] },
+      { title: 'Testkit', sections: [description({ text: testkit })] },
+    ].map(tab),
   ],
 };

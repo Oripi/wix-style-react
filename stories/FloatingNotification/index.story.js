@@ -4,7 +4,7 @@ import {
   tab,
   api,
   testkit,
-  liveCode as baseLiveCode,
+  code as baseCode,
   description,
   playground,
   importExample,
@@ -15,12 +15,7 @@ import FloatingNotification from '../../src/FloatingNotification';
 import { NOTIFICATION_TYPES } from '../../src/FloatingNotification/constants';
 import examples from './examples';
 
-const baseProps = {
-  autoRender: false,
-};
-
-const liveCode = config =>
-  baseLiveCode({ components: { ...baseScope }, ...baseProps, ...config });
+const code = config => baseCode({ components: { ...baseScope }, ...config });
 
 const trashLabel = { label: 'Trash' };
 const linkProps = {
@@ -80,7 +75,7 @@ export default {
           title: `Notification types`,
         }),
 
-        liveCode({
+        code({
           source: examples.ExampleAllTypes,
         }),
 
@@ -88,7 +83,7 @@ export default {
           title: `All options`,
         }),
 
-        liveCode({
+        code({
           source: examples.ExampleAllOptions,
         }),
 
@@ -96,24 +91,16 @@ export default {
           title: `Set buttons as anchors with href`,
         }),
 
-        liveCode({
+        code({
           source: examples.ExampleHref,
         }),
       ],
     }),
 
-    tab({
-      title: 'Playground',
-      sections: [playground()],
-    }),
-    tab({
-      title: 'API',
-      sections: [api()],
-    }),
-
-    tab({
-      title: 'Testkit',
-      sections: [testkit()],
-    }),
+    ...[
+      { title: 'Playground', sections: [playground()] },
+      { title: 'API', sections: [api()] },
+      { title: 'Testkit', sections: [description({ text: testkit })] },
+    ].map(tab),
   ],
 };

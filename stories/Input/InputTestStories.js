@@ -22,6 +22,7 @@ const kind = getTestStoryKind({
   category: Category.COMPONENTS,
   storyName: 'Input',
 });
+
 storiesOf(kind, module).add('1. Input with suffix group', () => {
   return (
     <div>
@@ -67,3 +68,7 @@ storiesOf(kind, module).add('2. Input with prefix group', () => {
     </div>
   );
 });
+
+storiesOf(kind, module).add('3. Input', () => (
+  <Input dataHook="wsr-input-with-value" value="hello" />
+));

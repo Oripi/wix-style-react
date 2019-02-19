@@ -14,19 +14,29 @@ Types of changes:
 1. **Docs** for documentation changes
 1. **Lab** components and features that are still in a work in progress
 
-## next
+## 6.4.0 - 2019-02-18
 
 ### Added
 
-- `<SortableList/>` - add listOfPropsThatAffectItems to fix render bug [#2925](https://github.com/wix/wix-style-react/pull/2925)
-- `<PageHeader/>` - Add ellipsis to title and subtitle [#2871](https://github.com/wix/wix-style-react/pull/2871)
-- `<FloatingNotification/>` - New Component [#2820](https://github.com/wix/wix-style-react/pull/2820)
-- `<Page/>` - New Generation - With Position Sticky ! [#2935](https://github.com/wix/wix-style-react/pull/2935)
+- `<SortableList/>` - add `listOfPropsThatAffectItems` to fix rendering bug [#2925](https://github.com/wix/wix-style-react/pull/2925)
+- `<PageHeader/>` - Add ellipsis to the title and subtitle [#2871](https://github.com/wix/wix-style-react/pull/2871)
+- `<FloatingNotification/>` - add new component [#2820](https://github.com/wix/wix-style-react/pull/2820)
+- `<FilePicker/>` - add `name` prop [#2937](https://github.com/wix/wix-style-react/pull/2937)
+- `<PopoverMenu/>` - add `onShow` and `onHide` callbacks [#2945](https://github.com/wix/wix-style-react/pull/2945)
+- `<TableActionCell>` - add `disabled` property to `primaryAction` [#2961](https://github.com/wix/wix-style-react/pull/2961)
+- `<CloseButton/>` - add support for a custom icon [#2960](https://github.com/wix/wix-style-react/pull/2960)
+
+### Changed
+
+- `<Page/>` - refactor and simplify to use `position:sticky` [#2935](https://github.com/wix/wix-style-react/pull/2935)
 
 ### Fixed
 
 - `<ContactItemBuilder/>` - fixed ellipsis [#2951](https://github.com/wix/wix-style-react/pull/2951)
-- `<ColorPicker/>` - fixed border radius and action button icon size according to design spec.[2959](https://github.com/wix/wix-style-react/pull/2959)
+- `<ColorPicker/>` - fixed border radius and action button icon size according to design spec [2959](https://github.com/wix/wix-style-react/pull/2959)
+
+### Lab
+- `<RichTextInputArea/>` - use `RichContentEditor` [2943](https://github.com/wix/wix-style-react/pull/2943)
 
 ## 6.3.0 - 2019-02-10
 
@@ -37,7 +47,7 @@ Types of changes:
 - `<SortableList/>` - add animation api [#2852](https://github.com/wix/wix-style-react/pull/2852)
 - `<Autocomplete/>` - add empty state feature [#2899](https://github.com/wix/wix-style-react/pull/2899)
 - `<Input/>` - add `<Input.Affix/>` and `<Input.IconAffix/>` for prefix/suffix rendering [#2887](https://github.com/wix/wix-style-react/pull/2887)
-- `<ColorPicker/>` - add teskit method for cancel action button[#2933](https://github.com/wix/wix-style-react/pull/2933)
+- `<ColorPicker/>` - add teskit method for cancel action button [#2933](https://github.com/wix/wix-style-react/pull/2933)
 
 ### Fixed
 
