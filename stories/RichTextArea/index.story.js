@@ -9,12 +9,11 @@ import {
 import LinkTo from '@storybook/addon-links/react';
 
 import { baseScope } from '../utils/Components/LiveCodeExample';
-import RichTextArea from '../../src/RichTextArea';
 import * as examples from './examples';
 
 export const settings = {
   category: '3. Inputs',
-  storyName: '3.2b + RichTextArea', // TODO: Ask Domas
+  storyName: '3.3 RichTextArea',
   dataHook: 'storybook-richtextarea',
 };
 
@@ -30,27 +29,18 @@ const example = ({ title, text, source }) =>
 export default {
   category: settings.category,
   storyName: settings.storyName,
-  // component: RichTextArea,
-  // componentPath: '../../src/RichTextArea',
-  // componentProps: setProps => ({
-  //   value: '',
-  //   resizable: false,
-  //   error: false,
-  //   dataHook: settings.dataHook,
-  //   onChange: value => {
-  //     setProps({ value });
-  //   },
-  // }),
-  // exampleProps: {
-  //   onChange: value => value,
-  // },
+
   sections: [
+    code({ source: examples.simple }),
+    description({ text: '### Description' }),
     description({
       text: `
-RichTextArea is an input for rich text`, // TODO: Ask for a description
+Rich text area allows to enter and edit long and complex descriptions.
+
+It supports styled bullet points, hyperlinks, images and more.`,
     }),
+    description({ text: '### Included Components' }),
     table({
-      title: 'Included Components',
       rows: [
         [
           <LinkTo kind="Components" story="FormField">{`<FormField/>`}</LinkTo>,
@@ -66,6 +56,7 @@ RichTextArea is an input for rich text`, // TODO: Ask for a description
         ],
       ],
     }),
+    description({ text: '### Import' }),
     importExample({
       source: examples.importExample,
     }),
