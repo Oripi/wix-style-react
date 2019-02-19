@@ -48,12 +48,6 @@ export const textButtonTestkitFactory = puppeteerUniTestkitFactoryCreator(
   textButtonDriverFactory,
 );
 
-import { timeInputDriverFactory } from '../src/TimeInput/TimeInput.unidriver';
-
-export const timeInputTestkitFactory = puppeteerUniTestkitFactoryCreator(
-  timeInputDriverFactory,
-);
-
 import { avatarDriverFactory } from '../src/Avatar/Avatar.driver';
 
 export const avatarTestkitFactory = puppeteerUniTestkitFactoryCreator(
