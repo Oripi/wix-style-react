@@ -13,7 +13,7 @@ const checkboxDriverFactory = ({ element, eventTrigger }) => {
     labelTestkitFactory({ wrapper: element, dataHook: 'checkbox-label' });
   const tooltipDriver = () =>
     toolTipTestkitFactory({ wrapper: element, dataHook: 'checkbox-box' });
-  const isChecked = elm => isClassExists(elm, 'checked');
+  const isChecked = () => input().checked;
 
   const getErrorMessage = async () => {
     try {
